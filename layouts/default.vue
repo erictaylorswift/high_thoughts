@@ -63,6 +63,11 @@ export default {
           icon: 'apps',
           title: 'Welcome',
           to: '/'
+        },
+        {
+          icon: 'web',
+          title: 'All thoughts',
+          to: '/blog/'
         }
       ],
       miniVariant: false,
