@@ -1,6 +1,7 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const pkg = require('./package')
 const contentConfig = require('./.contentful.json')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'universal',
@@ -86,7 +87,10 @@ module.exports = {
    */
   build: {
     transpile: ['vuetify/lib'],
-    plugins: [new VuetifyLoaderPlugin()],
+    plugins: [
+      new VuetifyLoaderPlugin(),
+      new webpack.ProvidePlugin({ _: 'lodash' })
+    ],
     loaders: {
       stylus: {
         import: ['~assets/style/variables.styl']
