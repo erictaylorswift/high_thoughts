@@ -6,6 +6,13 @@
     <Intro />
     <section>
       <v-container grid-list-sm>
+        <v-layout>
+          <v-flex>
+            <h3 class="text-xs-center font-weight-thin">Recent thoughts</h3>
+          </v-flex>
+        </v-layout>
+        <v-divider></v-divider>
+
         <v-layout row wrap class="mt-5">
           <v-flex v-for="(post, index) in posts" :key="index" lg3 pa-2>
             <a v-if="index <= 5" :href="/blog/ + post.fields.slug">
