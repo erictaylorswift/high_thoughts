@@ -32,7 +32,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar :clipped-left="clipped" fixed app color="#F24148" flat>
+    <v-toolbar :clipped-left="clipped" fixed app dark flat class="app_nav">
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <font-awesome-icon
         :icon="['fas', 'cannabis']"
