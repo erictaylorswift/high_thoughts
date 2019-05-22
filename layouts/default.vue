@@ -34,12 +34,13 @@
     </v-navigation-drawer>
     <v-toolbar :clipped-left="clipped" fixed app dark flat class="app_nav">
       <v-toolbar-side-icon @click="drawer = !drawer" />
-      <font-awesome-icon
-        :icon="['fas', 'cannabis']"
-        style="font-size: 22px;"
-        class="mr-0"
-      />
-      <v-btn flat nuxt to="/">{{ title }}</v-btn>
+      <a href="/">
+        <font-awesome-icon
+          :icon="['fas', 'cannabis']"
+          style="font-size: 22px;"
+          class="mr-0 pink_icon"
+        />
+      </a>
       <v-spacer />
     </v-toolbar>
     <v-content>
