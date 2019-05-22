@@ -15,7 +15,7 @@
 
         <v-layout row wrap class="mt-5">
           <v-flex v-for="(post, index) in posts" :key="index" lg3 pa-2>
-            <a v-if="index <= 5" :href="/blog/ + post.fields.slug">
+            <a v-if="index <= 3" :href="/blog/ + post.fields.slug">
               <v-card hover ripple>
                 <v-img
                   :src="post.fields.heroImage.fields.file.url"

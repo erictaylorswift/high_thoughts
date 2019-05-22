@@ -4,6 +4,7 @@
       <v-parallax
         :src="post.fields.heroImage.fields.file.url"
         height="300"
+        class="hidden-sm-and-down"
       ></v-parallax>
     </section>
     <section>
@@ -14,10 +15,22 @@
             <h1 class="deep-purple--text text--darken-4">
               {{ post.fields.title }}
             </h1>
-            <v-chip v-for="(tag, index) in post.fields.tags" :key="index">
-              # {{ tag }}
-            </v-chip>
-            <VueMarkdown>{{ post.fields.body }}</VueMarkdown>
+            <v-chip v-for="(tag, index) in post.fields.tags" :key="index"
+              ># {{ tag }}</v-chip
+            >
+            <v-card
+              :img="
+                post.fields.bodyImage
+                  ? post.fields.bodyImage.fields.file.url
+                  : ''
+              "
+              height="100%"
+              class="mt-5"
+            >
+              <v-card-text class="pa-5 white--text gradient_bg">
+                <VueMarkdown>{{ post.fields.body }}</VueMarkdown>
+              </v-card-text>
+            </v-card>
           </v-flex>
         </v-layout>
       </v-container>
@@ -55,32 +68,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.foreground .page-bar {
-  border-bottom: 0;
-}
-.headline {
-  padding: 3em 0 0;
-}
-.headline h1 {
-  font-size: 3.5em;
-}
-.copy {
-  padding-bottom: 7em;
-}
-.copy *:not(div) {
-  margin: 2em 0 1em;
-}
-.copy h3 {
-  font-size: 1.35em;
-}
-.copy ul {
-  margin: 0;
-  padding-left: 1em;
-  list-style: disc;
-}
-.copy li {
-  margin: 0;
-}
-</style>
