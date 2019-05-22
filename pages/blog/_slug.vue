@@ -10,7 +10,7 @@
     <section>
       <v-container>
         <v-layout justify-center align-center>
-          <v-flex xs8>
+          <v-flex xs12 lg8>
             <div>{{ post.fields.publishDate | formatDate }}</div>
             <h1 class="deep-purple--text text--darken-4">
               {{ post.fields.title }}
@@ -25,7 +25,7 @@
                   : ''
               "
               height="100%"
-              class="mt-5"
+              class="mt-5 pa-2 elevation-10"
             >
               <v-card-text class="pa-5 white--text gradient_bg">
                 <VueMarkdown>{{ post.fields.body }}</VueMarkdown>
