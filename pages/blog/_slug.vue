@@ -18,7 +18,7 @@
             <v-chip v-for="(tag, index) in post.fields.tags" :key="index"
               ># {{ tag }}</v-chip
             >
-            <div>
+            <div class="mt-5">
               <VueMarkdown>{{ post.fields.body }}</VueMarkdown>
             </div>
           </v-flex>

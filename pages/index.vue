@@ -42,7 +42,7 @@ export default {
     onlyFive() {
       let maxFiveArray = []
 
-      for (var i = 0; i < 6; i++) {
+      for (var i = 0; i < 5; i++) {
         if (this.posts[i]) {
           maxFiveArray.push(this.posts[i])
         }
